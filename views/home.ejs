@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <style media="screen">
+    body{
+      padding-top: 20px;
+      background-color: #F3F9FD;
+    }
+    h1{
+      text-align: center;
+      font-weight: bold;
+      color: #00008B;
+    }
+  </style>
+</head>
+<body ng-app='myapp' ng-controller='ctrl'>
+  <h1>DATA REPRESENTATION</h1>
+<div ng-view></div>
+
+<div class="row text-center">
+  <div class="col-sm-3"><input type="submit" name="name" class="btn btn-primary" value="India tax vs Population" ng-click="btn1()"></div>
+  <div class="col-sm-3"><input type="submit" name="name" class="btn btn-primary" value="World Population" ng-click="btn2()"></div>
+  <div class="col-sm-3"><input type="submit" name="name" class="btn btn-primary" value="India Employment" ng-click="btn3()"></div>
+  <div class="col-sm-3"><input type="submit" name="name" class="btn btn-primary" value="India Population" ng-click="btn4()"></div>
+</div>
+
+<hr>
+
+<table class=" data1 table table-striped table-bordered">
+  <tr class="info">
+    <td>Country Name</td>
+    <td>Country Code</td>
+    <td>Series Name</td>
+    <td>Series Code</td>
+    <td>2000 [YR2000]</td>
+    <td>2001 [YR2001]</td>
+    <td>2002 [YR2002]</td>
+    <td>2003 [YR2003]</td>
+    <td>2004 [YR2004]</td>
+    <td>2005 [YR2005]</td>
+    <td>2006 [YR2006]</td>
+    <td>2007 [YR2007]</td>
+    <td>2008 [YR2008]</td>
+    <td>2009 [YR2009]</td>
+    <td>2010 [YR2010]</td>
+    <td>2011 [YR2011]</td>
+    <td>2012 [YR2012]</td>
+    <td>2013 [YR2013]</td>
+    <td>2014 [YR2014]</td>
+    <td>Most Recent Value [YR20111]</td>
+  </tr>
+  <tr ng-repeat = "country in country1">
+    <td>{{country['Country Name']}} </td>
+    <td>{{country['Country Code']}}</td>
+    <td>{{country['Series Name']}}</td>
+    <td>{{country['Series Code']}}</td>
+    <td>{{country['2000 [YR2000]']}}</td>
+    <td>{{country['2001 [YR2001]']}}</td>
+    <td>{{country['2002 [YR2002]']}}</td>
+    <td>{{country['2003 [YR2003]']}}</td>
+    <td>{{country['2004 [YR2004]']}}</td>
+    <td>{{country['2005 [YR2005]']}}</td>
+    <td>{{country['2006 [YR2006]']}}</td>
+    <td>{{country['2007 [YR20007]']}}</td>
+    <td>{{country['2008 [YR2008]']}}</td>
+    <td>{{country['2009 [YR2009]']}}</td>
+    <td>{{country['2010 [YR2010]']}}</td>
+    <td>{{country['2011 [YR2011]']}}</td>
+    <td>{{country['2012 [YR2012]']}}</td>
+    <td>{{country['2013 [YR2013]']}}</td>
+    <td>{{country['2014 [YR2014]']}}</td>
+    <td>{{country['Most Recent Value [YR20111]']}}</td>
+  </tr>
+</table>
+
+<table class="data2 table table-striped table-bordered">
+  <tr class="info">
+    <td>Country</td>
+    <td>Population</td>
+  </tr>
+  <tr ng-repeat = "population in populations">
+    <td>{{population.country}}</td>
+    <td>{{population.population}}</td>
+  </tr>
+</table>
+
+<table class=" data3 table table-striped table-bordered">
+  <tr class="info">
+    <td>Country Name</td>
+    <td>Country Code</td>
+    <td>Series Name</td>
+    <td>Series Code</td>
+    <td>2000 [YR2000]</td>
+    <td>2001 [YR2001]</td>
+    <td>2002 [YR2002]</td>
+    <td>2003 [YR2003]</td>
+    <td>2004 [YR2004]</td>
+    <td>2005 [YR2005]</td>
+    <td>2006 [YR2006]</td>
+    <td>2007 [YR2007]</td>
+    <td>2008 [YR2008]</td>
+    <td>2009 [YR2009]</td>
+    <td>2010 [YR2010]</td>
+    <td>2011 [YR2011]</td>
+    <td>2012 [YR2012]</td>
+    <td>2013 [YR2013]</td>
+    <td>2014 [YR2014]</td>
+    <td>Most Recent Value [YR20111]</td>
+  </tr>
+  <tr ng-repeat = "country in country2">
+    <td>{{country['Country Name']}} </td>
+    <td>{{country['Country Code']}}</td>
+    <td>{{country['Series Name']}}</td>
+    <td>{{country['Series Code']}}</td>
+    <td>{{country['2000 [YR2000]']}}</td>
+    <td>{{country['2001 [YR2001]']}}</td>
+    <td>{{country['2002 [YR2002]']}}</td>
+    <td>{{country['2003 [YR2003]']}}</td>
+    <td>{{country['2004 [YR2004]']}}</td>
+    <td>{{country['2005 [YR2005]']}}</td>
+    <td>{{country['2006 [YR2006]']}}</td>
+    <td>{{country['2007 [YR20007]']}}</td>
+    <td>{{country['2008 [YR2008]']}}</td>
+    <td>{{country['2009 [YR2009]']}}</td>
+    <td>{{country['2010 [YR2010]']}}</td>
+    <td>{{country['2011 [YR2011]']}}</td>
+    <td>{{country['2012 [YR2012]']}}</td>
+    <td>{{country['2013 [YR2013]']}}</td>
+    <td>{{country['2014 [YR2014]']}}</td>
+    <td>{{country['Most Recent Value [YR20111]']}}</td>
+  </tr>
+</table>
+
+<table class=" data4 table table-striped table-bordered">
+  <tr class="info">
+    <td>Country Name</td>
+    <td>Country Code</td>
+    <td>Series Name</td>
+    <td>Series Code</td>
+    <td>2001 [YR2001]</td>
+    <td>2002 [YR2002]</td>
+    <td>2003 [YR2003]</td>
+    <td>2004 [YR2004]</td>
+    <td>2005 [YR2005]</td>
+    <td>2006 [YR2006]</td>
+    <td>2007 [YR2007]</td>
+    <td>2008 [YR2008]</td>
+    <td>2009 [YR2009]</td>
+    <td>2010 [YR2010]</td>
+    <td>2011 [YR2011]</td>
+    <td>2013 [YR2013]</td>
+    <td>2014 [YR2014]</td>
+    <td>2015 [YR2015]</td>
+    <td>2016 [YR2016]</td>
+  </tr>
+  <tr ng-repeat = "country in country3">
+    <td>{{country['Country Name']}} </td>
+    <td>{{country['Country Code']}}</td>
+    <td>{{country['Series Name']}}</td>
+    <td>{{country['Series Code']}}</td>
+    <td>{{country['2001 [YR2001]']}}</td>
+    <td>{{country['2002 [YR2002]']}}</td>
+    <td>{{country['2003 [YR2003]']}}</td>
+    <td>{{country['2004 [YR2004]']}}</td>
+    <td>{{country['2005 [YR2005]']}}</td>
+    <td>{{country['2006 [YR2006]']}}</td>
+    <td>{{country['2007 [YR2007]']}}</td>
+    <td>{{country['2008 [YR2008]']}}</td>
+    <td>{{country['2009 [YR2009]']}}</td>
+    <td>{{country['2010 [YR2010]']}}</td>
+    <td>{{country['2011 [YR2011]']}}</td>
+    <td>{{country['2013 [YR2013]']}}</td>
+    <td>{{country['2014 [YR2014]']}}</td>
+    <td>{{country['2015 [YR2015]']}}</td>
+    <td>{{country['2016 [YR2016]']}}</td>
+  </tr>
+</table>
+
+  <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/jsFile.js"></script>
+</body>
+</html>
